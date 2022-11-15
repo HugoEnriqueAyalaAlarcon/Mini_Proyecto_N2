@@ -11,26 +11,51 @@
 
   </head>
   <body>
-
-    Bill
-
-    Select Tip %
-    5%
-    10%
-    15%
-    25%
-    50%
-    Custom
-
-    Number of People
-
-    Tip Amount
-    / person
-
-    Total
-    / person
-
-    Reset
-    
+    <!--div contenedor de datos de ingreso para calcular la propina-->
+    <div class="container">
+        <!--total de la cuenta-->
+        <div>
+            <p>
+                 Bill
+                <input type="text" value="total de la cuenta">
+            </p>
+        </div>
+        <!--botones para seleccionar porcentaje de propina-->
+        <div>
+            Select Tip
+            <button>5%</button>
+            <button>10%</button>
+            <button>15%</button>
+            <button>25%</button>
+            <button>50%</button>
+            <button>Custom</button>
+        </div>
+        <!--numero de poersonas-->
+        <div>
+            Number of People
+            <input type="text" name="" id="">
+        </div>
+        
+        
+    </div>
+    <!--contenedor datos de ssalida-->
+    <div class="container">
+        <!--lado izquierdo del contenedor-->
+        <div>
+            <p> 
+                Tip Amount
+                /person
+            </p>
+            <p> 
+                Total
+                /person
+            </p>
+        </div>
+        <div>
+            <input type="text">
+            <input type="text">
+        </div>
+        <button>Reset</button>
+    </div>
   </body>
 </html>
