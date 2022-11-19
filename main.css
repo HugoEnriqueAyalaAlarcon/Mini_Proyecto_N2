@@ -1,0 +1,146 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Space Mono';
+    color: hsl(186, 14%, 43%);
+    /*outline: 1px solid red;*/
+}
+
+
+  
+body{
+    background-color: hsl(185, 41%, 84%);
+}
+.textSplit{
+    background-color: hsl(185, 41%, 84%); /*Cyan grisaseo claro/fondo */
+}
+.conteiner-cal{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+.Bill{
+    padding-top: 17px;
+}
+
+.input{
+    text-align: end;
+    font-size: 20px;
+    border: 0;
+    background-color: hsl(189, 41%, 97%)
+}
+
+
+
+/*-------Bill*/
+.containerBill{
+    text-align: end;
+    width: 100%;
+    background-color: hsl(189, 41%, 97%);
+    height: 47px;
+}
+
+.containerPeople{
+    width: 100%;
+    background-color: hsl(189, 41%, 97%);
+    display: flex;
+    justify-content: space-between;
+}
+
+.datosInput{
+    height: 430px;
+    width: 327px;
+}
+.selectTip{
+    height: 179px;
+    width: 327px;
+}
+
+.datosUotput{
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 1.5rem;
+    width: 327px;
+    height: 258px;
+    overflow: hidden;
+}
+
+.btnTip{
+  
+    background-color:  hsl(183, 100%, 15%);
+    color: aliceblue; 
+    border-radius: 1rem;
+    border:  1px solid white;
+  
+}
+
+/*////////////////////////////////**/
+.componentes{
+    background-color: hsl(0, 0%, 100%);
+    border-start-end-radius: 1.5rem;
+    border-radius: 1.5rem 1.5rem 0rem 0rem;
+    height: 787px;
+    /*
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    */
+}
+
+.textChicoBlanco{
+    color: azure;
+}
+
+
+/*/////////////medias/////////////*/
+
+
+
+@media (min-width: 640px) { 
+    *{
+        margin: 0;
+        padding: 0;
+        
+    }
+    .conteiner-cal{
+        justify-content: center;
+    }
+    .conteiner-main{ 
+        display: flex;
+        justify-content: center;
+        align-items:stretch;
+    }
+    .componentes{
+        width: 100vh;
+        height: 50vh; 
+        border-radius: 2rem;
+    }
+
+    .datosInput{
+        width: 50%;
+        height: 100%;
+    }
+    .datosUotput{
+        width: 50%;
+        height: 100%;
+    }
+
+ }
+ .btn-success {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: hsl(183, 100%, 15%);
+    --bs-btn-border-color: #198754;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #157347;
+    --bs-btn-hover-border-color: #146c43;
+    --bs-btn-focus-shadow-rgb: 60, 153, 110;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: hsl(183, 100%, 15%);
+    --bs-btn-active-border-color: #13653f;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #198754;
+    --bs-btn-disabled-border-color: #198754;
+  }

@@ -1,61 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-    
-    <title>Tip calculator app</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- displays site properly based on user's device -->
 
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+  <link rel="stylesheet" href="./bp-ac/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./main.css" />
+  <script src="./bp-ac/js/bootstrap.bundle.min.js" defer></script>
+  <!--logica en js-->
+  <script src="./main.js" defer></script>
 
-  </head>
-  <body>
-    <!--div contenedor de datos de ingreso para calcular la propina-->
-    <div class="container">
-        <!--total de la cuenta-->
-        <div>
-            <p>
-                 Bill
-                <input type="text" value="total de la cuenta">
-            </p>
-        </div>
-        <!--botones para seleccionar porcentaje de propina-->
-        <div>
-            Select Tip
-            <button>5%</button>
-            <button>10%</button>
-            <button>15%</button>
-            <button>25%</button>
-            <button>50%</button>
-            <button>Custom</button>
-        </div>
-        <!--numero de poersonas-->
-        <div>
-            Number of People
-            <input type="text" name="" id="">
-        </div>
-        
-        
-    </div>
-    <!--contenedor datos de ssalida-->
-    <div class="container">
-        <!--lado izquierdo del contenedor-->
-        <div>
-            <p> 
-                Tip Amount
+  <!--font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&family=Fraunces:opsz,wght@9..144,700&family=Space+Mono:wght@700&display=swap"
+    rel="stylesheet" />
+
+  <title>Pruebas flex</title>
+</head>
+
+<body class="conteiner-main">
+  <div>
+  <div class="conteiner-cal">
+    <h1 class="textSplit text-center">
+      SPLI <br />
+      TTER
+    </h1>
+    <div class="componentes d-flex flex-column justify-content-evenly flex-lg-row">
+      <!--contenedor datos de entrada-->
+      <div class="container datosInput d-flex flex-column justify-content-evenly">
+        <label for="" class="row">
+          <label for="" class="col">Bill</label>
+        </label>
+        <label for="" class="row">
+          
+        $<input id="bill" type="" value="0" class="input col d-flex flex-row justify-content-between">
+        </label>
+        <label for="" class="row">
+          <label for="" class="col">Select Tip %</label>
+        </label>
+        <label for="" class="row">
+          <label for="" class="col d-flex flex-column"><buton class="btn btn-success" data-number="0"> 5%</buton></label>
+          <label for="" class="col d-flex flex-column"><buton class="btn btn-success" data-number="1"> 10%</buton></label>
+        </label>
+        <label for="" class="row">
+          <label for="" class="col d-flex flex-column"><buton class="btn btn-success" data-number="2"> 15%</buton></label>
+          <label for="" class="col d-flex flex-column"><buton class="btn btn-success" data-number="3"> 25%</buton></label>
+        </label>
+        <label for="" class="row">
+          <label for="" class="col d-flex flex-column"><buton class="btn btn-success" data-number="4"> 50%</buton></label>
+          <label for="" class="col d-flex flex-column"><buton class="btn btn-success" data-number="5"> Custom </buton></label>
+        </label>
+        <label for="" class="row">
+          <label for="" class="col">Mumber of People  <img src="icon/person.svg" alt=""></label>
+        </label>
+        <label for="" class="row">
+          <input id="inputNPeople" type="" value="0" class="input">
+        </label>
+      </div>
+        <!--contenedor datos de salida-->
+        <div class="container datosUotput d-flex flex-column justify-content-evenly">
+          <!--lado saluda de datos-->
+          <div class="row">
+            <label class="col-6 textChicoBlanco">
+              Tip Amount <br>
+              <label>
                 /person
-            </p>
-            <p> 
-                Total
+              </label>
+            </label>
+            <label class="col-6 text-end fs-1" id="tipA" >
+              $0
+            </label>
+          </div>
+          <div class="row">
+            <label class="col-6 textChicoBlanco">
+              Total <br>
+              <label>
                 /person
-            </p>
+              </label>
+            </label>
+            <label class="col-6  text-end fs-1" id="total">
+              $0
+            </label>
+          </div class="row container-fluid">
+            <button class="btnReset btn btn-success" data-number="6">Reset</button>
+          </div>
         </div>
-        <div>
-            <input type="text">
-            <input type="text">
-        </div>
-        <button>Reset</button>
+      </div>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>
