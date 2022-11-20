@@ -16,12 +16,12 @@ let buttons=document.querySelectorAll(".btn");
 //////////////se ingresan los datos y se guandar en las variables si son validos
 /////////////calculos
 let calculos = (bill , selectTip , numPeople) => {
-    tipAmount =  (bill * (selectTip)) / numPeople;
-    total = (bill/numPeople)+tipAmount;
-    let newTipAmoun = tipAmount.toFixed(1);
-    let newTotal = total.toFixed(1);
-    totalDoom.innerHTML = `${newTipAmoun}`;
-    tipDoom.innerHTML = `${newTotal}`;
+    tipAmount =  (bill * (selectTip)) / numPeople; //propina por persona
+    total = (bill/numPeople)+tipAmount;             //cuenta entre las personas y su parte de propina por persona
+    let newTipAmoun = tipAmount.toFixed(0);
+    let newTotal = total.toFixed(0);
+    totalDoom.innerHTML = `${newTotal}`;
+    tipDoom.innerHTML = `${newTipAmoun}`;
 };
 ////////////resultados
 let calcula = (bill , selectTip , numPeople) => {
@@ -56,7 +56,7 @@ buttons[0].onclick = () => {
 }
 buttons[1].onclick = () => {
     buttons[5].innerHTML = "custom";
-    selectTip = .10;  
+    selectTip = .1;  
     calcula(bill , selectTip , numPeople);
 }
 buttons[2].onclick = () => {
@@ -66,7 +66,7 @@ buttons[2].onclick = () => {
 }
 buttons[3].onclick = () => {
     buttons[5].innerHTML = "custom";
-    selectTip = .20;  
+    selectTip = .2;  
     calcula(bill , selectTip , numPeople);
 }
 buttons[4].onclick = () => {
