@@ -105,14 +105,45 @@ buttons[6].onclick = () => {
 
 
 ////////main
+/*
 inputBill.addEventListener('click', function() {
     if (bill>0){
         inputBill.value = bill;
     }else{
         inputBill.value = "";
     }
-});
-
+});*/
+/////////////////////
+//////////////codigo experimental funciona muy bien
+////////////////////////
+inputBill.oninput = function() {
+    /* result.innerHTML = input.value;*/
+     let datoEntrada=inputBill.value;
+     if(Number(datoEntrada)){
+         bill = datoEntrada;
+         bill = parseFloat(bill);
+         console.log(bill);
+     }
+}
+/////////////////////
+//////////////codigo esperimental
+////////////////////////
+/////////////////////
+//////////////codigo experimental funciona muy bien
+////////////////////////
+inputNPeople.oninput = function() {
+    /* result.innerHTML = input.value;*/
+     let datoEntrada=inputNPeople.value;
+     if(Number(datoEntrada)){
+        numPeople = datoEntrada;
+        numPeople = parseFloat(numPeople);
+         console.log(numPeople);
+     }
+}
+/////////////////////
+//////////////codigo esperimental
+////////////////////////
+/*
 inputNPeople.addEventListener('click', function() {
     if (numPeople>0){
         inputNPeople.value = numPeople;
@@ -120,8 +151,8 @@ inputNPeople.addEventListener('click', function() {
         inputNPeople.value = "";
     }
 });
-
-
+*/
+///////
 inputBill.addEventListener("keypress",(event) => {//si entran datos por input bill
     bill=datosInput(event , "bill");
     calcula(bill , selectTip , numPeople);
