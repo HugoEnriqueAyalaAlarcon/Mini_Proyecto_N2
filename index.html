@@ -24,11 +24,12 @@
 </head>
 
 <body class="conteiner-main">
-  <div class="conteiner-cal">
+  <div class="container conteiner-cal d-flex flex-column justify-content-between px-0">
     <h1 class="textSplit text-center">
       SPLI <br />
       TTER
     </h1>
+    
     <!--contenedor de la tarjeta-->
     <div class=" card componentes d-flex flex-column justify-content-evenly flex-lg-row">
       <!--contenedor datos de entrada-->
@@ -36,47 +37,34 @@
         <label class="row">
           <span class="col">Bill</span>
         </label>
-        <label class="row">
-          $<input id="bill" value="0" class="input col d-flex flex-row justify-content-between">
-        </label>
-        <label class="row">
-          <span class="col">Select Tip %</span>
-        </label>
-        <span class="row">
-          <span class="col d-flex flex-column">
-            <span class="btn btn-success" data-number="0"> 5%</span>
-          </span>
-          <span class="col d-flex flex-column">
-            <span class="btn btn-success" data-number="1"> 10%</span>
-          </span>
-        </span>
-        <span class="row">
-          <span class="col d-flex flex-column">
-            <span class="btn btn-success" data-number="2"> 15%</span>
-          </span>
-          <span class="col d-flex flex-column">
-            <span class="btn btn-success" data-number="3"> 25%</span>
-          </span>
-        </span>
-        <span class="row">
-          <span class="col d-flex flex-column">
-            <span class="btn btn-success" data-number="4"> 50%</span>
-          </span>
-          <span class="col d-flex flex-column">
-            <span class="btnCustom btn" data-number="5"> Custom </span>
-          </span>
-        </span>
+        
+        <div class="container row">
+          <span class=" col-12"> $
+          <input id="bill" value="0" class="input col-11"></span>
+        </div>
+
+        <div class="row d-flex justify-content-around">
+          <span class="col-12">Select Tip %</span>
+          <span class="btn col-5 btn-success" data-number="0"> 5%</span>
+          <span class="btn col-5 btn-success" data-number="1"> 10%</span>
+          <span class="btn col-5 btn-success" data-number="2"> 15%</span>
+          <span class="btn col-5 btn-success" data-number="3"> 25%</span>
+          <span class="btn col-5 btn-success" data-number="4"> 50%</span>
+          <span class="col-5 btnCustom btn" data-number="5"> Custom </span>
+        </div>
         <label class="row">
           <span class="col">Mumber of People <img src="icon/person.svg" alt="noImg"></span>
         </label>
-        <label class="row">
-          <input id="inputNPeople" value="0" class="input">
-        </label>
+        <div class="container row">
+          <span class=" col-12"> <img src="icon/person.svg" alt="n">
+          <input id="inputNPeople" value="0" class="input col-11"></span>
+        </div>
       </div>
+      
       <!--contenedor datos de salida-->
-      <div class="container datosUotput d-flex flex-column justify-content-evenly">
+      <div class="container datosUotput  d-flex flex-column justify-content-around">
         <!--lado salida de datos-->
-        <div class="contTextSalida">
+        <div class="container contTextSalida  d-flex flex-column justify-content-around">
           <div class="row">
             <label class="col-4 textChicoBlanco">
               Tip Amount <br>
@@ -89,16 +77,18 @@
             </label>
           </div>
           <div class="row">
-            <label class="col-3 textChicoBlanco">
+            <span class="col-3 textChicoBlanco">
               Total <br>
               <span>
                 /person
               </span>
-            </label>
-            <label class="col  text-end fs-1 resul" id="total">
+            </span>
+            <span class="col  text-end fs-1 resul" id="total">
               $0
-            </label>
-              <button class="btnReset btn">Reset</button>
+            </span>
+          </div>
+            <div>
+                <span class="col-12 btnReset btn">Reset</span>
           </div>
         </div>
       </div>

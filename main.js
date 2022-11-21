@@ -20,8 +20,12 @@ let calculos = (bill , selectTip , numPeople) => {
     total = (bill/numPeople)+tipAmount;             //cuenta entre las personas y su parte de propina por persona
     let newTipAmoun = tipAmount.toFixed(0);
     let newTotal = total.toFixed(0);
-    totalDoom.innerHTML = `${newTotal}`;
+    /////hacer resultado mas chico
+    newTipAmoun.length < 6 ? tipDoom.classList.add ('fs-1'): tipDoom.classList.remove ('fs-1');    
+    newTotal.length < 6 ? totalDoom.classList.add ('fs-1'): totalDoom.classList.remove ('fs-1');
+        /////////////
     tipDoom.innerHTML = `${newTipAmoun}`;
+    totalDoom.innerHTML = `${newTotal}`;
 };
 ////////////resultados
 let calcula = (bill , selectTip , numPeople) => {
@@ -29,7 +33,6 @@ let calcula = (bill , selectTip , numPeople) => {
         calculos(bill , selectTip , numPeople)
     }
 }
-////////funciones
 let datosInput = (cuenta , input) => {
     if(cuenta.charCode>47 && cuenta.charCode<57){
         if(input==='bill'){
@@ -105,18 +108,9 @@ buttons[6].onclick = () => {
 
 
 ////////main
-/*
-inputBill.addEventListener('click', function() {
-    if (bill>0){
-        inputBill.value = bill;
-    }else{
-        inputBill.value = "";
-    }
-});*/
-/////////////////////
-//////////////codigo experimental funciona muy bien
-////////////////////////
-inputBill.oninput = function() {
+
+/////////detecta cambios en inputBill
+inputBill.oninput = () => {
     /* result.innerHTML = input.value;*/
      let datoEntrada=inputBill.value;
      if(Number(datoEntrada)){
@@ -125,13 +119,9 @@ inputBill.oninput = function() {
          console.log(bill);
      }
 }
-/////////////////////
-//////////////codigo esperimental
-////////////////////////
-/////////////////////
-//////////////codigo experimental funciona muy bien
-////////////////////////
-inputNPeople.oninput = function() {
+
+/////////detecta cambios en inputNPeople
+inputNPeople.oninput = () => {
     /* result.innerHTML = input.value;*/
      let datoEntrada=inputNPeople.value;
      if(Number(datoEntrada)){
@@ -140,25 +130,25 @@ inputNPeople.oninput = function() {
          console.log(numPeople);
      }
 }
-/////////////////////
-//////////////codigo esperimental
-////////////////////////
-/*
-inputNPeople.addEventListener('click', function() {
-    if (numPeople>0){
-        inputNPeople.value = numPeople;
-    }else{
-        inputNPeople.value = "";
-    }
-});
-*/
-///////
-inputBill.addEventListener("keypress",(event) => {//si entran datos por input bill
+
+/////// clik en de mouse
+inputBill.onclick = () => {
+    console.log(inputBill.value);
+    inputBill.value != Number ? inputBill.value="" : alert('Error');
+}
+
+inputNPeople.onclick = () => {
+    console.log(inputNPeople.value);
+    inputNPeople.value != Number ? inputNPeople.value="" : alert('Error');
+
+///////eventos del teclado
+inputBill.addEventListener("keypress",(event) => { 
     bill=datosInput(event , "bill");
     calcula(bill , selectTip , numPeople);
 });
 
-inputNPeople.addEventListener("keypress",(event) => {//si entran datos por input numbrePeople
+}
+inputNPeople.addEventListener("keypress",(event) => {//
     numPeople=datosInput(event , "people");
     calcula(bill , selectTip , numPeople);
 

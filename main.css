@@ -1,93 +1,23 @@
 *{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
     font-family: 'Space Mono';
     color: hsl(186, 14%, 43%);
-    /*outline: 1px solid red;*/
-}
 
+}
 body{
     background-color: hsl(185, 41%, 84%);
 }
-
 .textSplit{
     background-color: hsl(185, 41%, 84%); /*Cyan grisaseo claro/fondo */
 }
-
-.conteiner-cal{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100vh;
-}
-
-.Bill{
-    padding-top: 17px;
-}
-
 .input{
     text-align: end;
     font-size: 20px;
-    border: 0;
+    border: none;
     background-color: hsl(189, 41%, 97%)
 }
-
-/*-------Bill*/
-.containerBill{
-    text-align: end;
-    width: 100%;
-    background-color: hsl(189, 41%, 97%);
-    height: 47px;
-}
-
-.containerPeople{
-    width: 100%;
-    background-color: hsl(189, 41%, 97%);
-    display: flex;
-    justify-content: space-between;
-}
-
-.datosInput{
-    height: 430px;
-    width: 327px;
-}
-
-.selectTip{
-    height: 179px;
-    width: 327px;
-}
-
 .datosUotput{
     background-color: hsl(183, 100%, 15%);
     border-radius: 1.5rem;
-    width: 327px;
-    height: 258px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.contTextSalida{
-    width: 90%;
-    height: 80%;
-    display: flex;
-    flex-direction: column;
-    align-content: space-between;
-    justify-content: space-around;
-}
-.resul{
-    color: hsl(172, 67%, 45%);
-}
-
-.btnTip{
-  
-    background-color:  hsl(183, 100%, 15%);
-    color: aliceblue; 
-    border-radius: 1rem;
-    border:  1px solid white;
-  
 }
 
 .componentes{
@@ -97,45 +27,54 @@ body{
     height: 787px;
 }
 
+/*medias*/
+@media(max-width: 375px){
+    .conteiner-cal{
+        height: 100vh;
+    }
+    .contTextSalida{
+        height: 100%;
+}
+}
+@media(max-width: 991px){
+    .conteiner-cal{
+        height: 100vh;
+
+    }
+        .datosUotput {
+            height: 50%;
+        }
+        .contTextSalida{
+            height: 100%;
+    }
+        
+}
+
+    @media(min-width: 991px){
+        .conteiner-cal{
+            height: 70vh;
+        }
+        .componentes{
+            border-radius: 1rem;
+        }
+        .contTextSalida{
+            height: 80%;
+            width: 70%;
+    }
+}
+/*colores*/
 .textChicoBlanco{
     color: azure;
 }
 
-/*/////////////medias/////////////*/
-@media (min-width: 640px) { 
-    *{
-        margin: 0;
-        padding: 0;
-        
-    }
-    .conteiner-cal{
-        justify-content: center;
-    }
-    .conteiner-main{ 
-        display: flex;
-        justify-content: center;
-        align-items:stretch;
-    }
-    .componentes{
-        width: 100vh;
-        height: 50vh; 
-        border-radius: 2rem;
-        display: flex;
-        align-items:center;
-    }
+.resul{
+    color: hsl(172, 67%, 45%);
+}
 
-    .datosInput{
-        width: 45%;
-        height: 100%;
-    }
-    .datosUotput{
-        width: 45%;
-        height: 88%;
-    }
 
- }
- /*modificando color de los botones*/
- .btn-success {
+
+/*modificando color de los botones*/
+.btn-success {
     --bs-btn-color: #fff;
     --bs-btn-bg: hsl(183, 100%, 15%);
     --bs-btn-border-color: #198754;
@@ -168,7 +107,7 @@ body{
     --bs-btn-disabled-border-color: #198754;
   }
   .btnReset {
-    margin-top: 16%;
+
     color: hsl(183, 100%, 15%);
     --bs-btn-color: #fff;
     --bs-btn-bg: hsl(172, 67%, 45%);
