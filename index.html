@@ -11,7 +11,7 @@
   <!--botstrap js-->
   <script src="./bp-ac/js/bootstrap.bundle.min.js" defer></script>
   <!--Main css-->
-  <link rel="stylesheet" href="./main.css" />
+  <!--<link rel="stylesheet" href="./main.css" />-->
   <!--main en js-->
   <script src="./main.js" defer></script>
   <!--font-->
@@ -22,76 +22,62 @@
     rel="stylesheet" />
 </head>
 
-<body class="conteiner-main">
-  <div class="container conteiner-cal d-flex flex-column justify-content-between px-0">
-    <h1 class="textSplit text-center">
-      SPLI <br />
-      TTER
-    </h1>
-    
-    <!--contenedor de la tarjeta-->
-    <div class=" card componentes d-flex flex-column justify-content-evenly flex-lg-row">
-      <!--contenedor datos de entrada-->
-      <div class="container datosInput d-flex flex-column justify-content-evenly">
-        <label class="row">
-          <span class="col">Bill</span>
-        </label>
-        
-        <div class="container row">
-          <span class=" col-12"> $
-          <input id="bill" value="0" class="input col-11"></span>
+<body class="bg-info bg-opacity-25 textSplit text-start">
+ <h1 class="mt-5 text-center text-dark text-opacity-75 fw-bold">SPLI <br> TTER</h1>
+ <div class="container card rounded-5 bg-light bg-opacity-75 shadow mt-5">
+  <div class="row">
+    <div class="col-sm-6 datosEntrada mb-3 mt-3 p-3 d-grid gap-3">
+      <form >
+        <label for="bill">Bill</label>
+        <input type="text" id="bill" class="col-12 mb-3 border bg-body bg-opacity-50 rounded-3 border-0 input text-end" value="0" autofocus/>
+
+        <div class="row ">
+          <span class="col-12">Select Tip %</span>
+          <button class="btn col-sm-3 col-5 btn-success my-2 mx-3" > 5%</button>
+          <button class="btn col-sm-3 col-5 btn-success my-2 mx-3" > 10%</button>
+          <button class="btn col-sm-3 col-5 btn-success my-2 mx-3" > 15%</button>
+          <button class="btn col-sm-3 col-5 btn-success my-2 mx-3" > 25%</button>
+          <button class="btn col-sm-3 col-5 btn-success my-2 mx-3" > 50%</button>
+          <button class="col-sm-3 col-5 btnCustom btn btn-outline-success my-2 mx-3 mb-3" > Custom </button>
         </div>
 
-        <div class="row d-flex justify-content-around">
-          <span class="col-12">Select Tip %</span>
-          <span class="btn col-5 btn-success" data-number="0"> 5%</span>
-          <span class="btn col-5 btn-success" data-number="1"> 10%</span>
-          <span class="btn col-5 btn-success" data-number="2"> 15%</span>
-          <span class="btn col-5 btn-success" data-number="3"> 25%</span>
-          <span class="btn col-5 btn-success" data-number="4"> 50%</span>
-          <span class="col-5 btnCustom btn" data-number="5"> Custom </span>
-        </div>
-        <label class="row">
-          <span class="col">Mumber of People <img src="icon/person.svg" alt="noImg"></span>
-        </label>
-        <div class="container row">
-          <span class=" col-12"> <img src="icon/person.svg" alt="n">
-          <input id="inputNPeople" value="0" class="input col-11"></span>
-        </div>
-      </div>
-      
-      <!--contenedor datos de salida-->
-      <div class="container datosUotput  d-flex flex-column justify-content-around">
-        <!--lado salida de datos-->
-        <div class="container contTextSalida  d-flex flex-column justify-content-around">
-          <div class="row">
-            <label class="col-4 textChicoBlanco">
-              Tip Amount <br>
-              <span>
-                /person
-              </span>
-            </label>
-            <label class="col text-end fs-1 resul" id="tipA">
-              $0
-            </label>
-          </div>
-          <div class="row">
-            <span class="col-3 textChicoBlanco">
-              Total <br>
-              <span>
-                /person
-              </span>
+        <label for="inputNPeople">Mumber of People</label>
+        <input type="text" id="inputNPeople" class="col-12 border bg-body bg-opacity-50 rounded-3 border-0 input text-end" value="0"/>
+      </form>
+    </div>
+    <!--datos de salida-->
+    <div class="col-12 col-sm-6 py-sm-3 py-3">
+      <div class=" bg-success rounded-5 p-5 ">
+        <form action="control" class="d-grid gap-5">
+        <div class="row">
+          <label class="col-4 text-light fs-5">
+            Tip Amount <br>
+            <span class=" text-light opacity-50">
+              /person
             </span>
-            <span class="col  text-end fs-1 resul" id="total">
-              $0
-            </span>
-          </div>
-            <div>
-                <span class="col-12 btnReset btn">Reset</span>
-          </div>
+          </label>
+          <label class="col text-end fs-1 text-dark text-opacity-50 fw-bold" id="tipA">
+            $0
+          </label>
         </div>
+        <div class="row">
+          <span class="col-4  text-light fs-5">
+            Total <br>
+            <span class=" text-light opacity-50">
+              /person
+            </span>
+          </span>
+          <span class="col  text-end fs-1 text-dark text-opacity-50 fw-bold" id="total">
+            $0
+          </span>
+        </div>
+        <div>
+          <button class="col-12 btn btn-light opacity-75 rounded-5">Reset</button>
+        </div> 
+      </form>  
       </div>
     </div>
   </div>
+ </div>
 </body>
 </html>

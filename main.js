@@ -53,32 +53,38 @@ let datosInput = (cuenta , input) => {
 
 ///////botones
 buttons[0].onclick = () => {
+    event.preventDefault()
     buttons[5].innerHTML = "custom";
     selectTip = .05;  
     calcula(bill , selectTip , numPeople);
 }
 buttons[1].onclick = () => {
+    event.preventDefault()
     buttons[5].innerHTML = "custom";
     selectTip = .1;  
     calcula(bill , selectTip , numPeople);
 }
 buttons[2].onclick = () => {
+    event.preventDefault()
     buttons[5].innerHTML = "custom";
     selectTip = .15;  
     calcula(bill , selectTip , numPeople);
 }
 buttons[3].onclick = () => {
+    event.preventDefault()
     buttons[5].innerHTML = "custom";
     selectTip = .2;  
     calcula(bill , selectTip , numPeople);
 }
 buttons[4].onclick = () => {
+    event.preventDefault()
     buttons[5].innerHTML = "custom";
     selectTip = .25;  
     calcula(bill , selectTip , numPeople);
 }
 
 buttons[5].onclick = () =>{
+    event.preventDefault()
     custom=prompt("Dame por favor el porcentaje de propina, gracias");
     if(!isNaN(custom) && custom != null && custom != ""){
         buttons[5].innerHTML = `${custom}%`;
@@ -94,6 +100,7 @@ buttons[5].onclick = () =>{
 
 ///////////////////////*reset*/
 buttons[6].onclick = () => {
+    event.preventDefault()
     bill=0;
     selectTip=0;  
     numPeople=0;
